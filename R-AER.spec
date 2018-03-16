@@ -4,14 +4,13 @@
 #
 Name     : R-AER
 Version  : 1.2.5
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/AER_1.2-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/AER_1.2-5.tar.gz
 Summary  : Applied Econometrics with R
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
 Requires: R-Formula
-Requires: R-ROCR
 Requires: R-car
 Requires: R-lmtest
 Requires: R-pbkrtest
@@ -20,7 +19,6 @@ Requires: R-sandwich
 Requires: R-systemfit
 Requires: R-zoo
 BuildRequires : R-Formula
-BuildRequires : R-ROCR
 BuildRequires : R-car
 BuildRequires : R-lmtest
 BuildRequires : R-pbkrtest
@@ -43,11 +41,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521223467
+export SOURCE_DATE_EPOCH=1521223940
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521223467
+export SOURCE_DATE_EPOCH=1521223940
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

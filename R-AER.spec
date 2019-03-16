@@ -4,13 +4,12 @@
 #
 Name     : R-AER
 Version  : 1.2.6
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/AER_1.2-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/AER_1.2-6.tar.gz
 Summary  : Applied Econometrics with R
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
-Requires: R-maxLik
 BuildRequires : R-Formula
 BuildRequires : R-car
 BuildRequires : R-lmtest
@@ -33,10 +32,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552709654
+export SOURCE_DATE_EPOCH=1552709835
 
 %install
-export SOURCE_DATE_EPOCH=1552709654
+export SOURCE_DATE_EPOCH=1552709835
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

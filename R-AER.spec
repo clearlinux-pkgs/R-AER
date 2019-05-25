@@ -4,21 +4,31 @@
 #
 Name     : R-AER
 Version  : 1.2.6
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/AER_1.2-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/AER_1.2-6.tar.gz
 Summary  : Applied Econometrics with R
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
+Requires: R-Formula
 Requires: R-MatrixModels
 Requires: R-SparseM
 Requires: R-abind
 Requires: R-carData
 Requires: R-cellranger
+Requires: R-data.table
 Requires: R-forcats
+Requires: R-haven
+Requires: R-hms
+Requires: R-lmtest
+Requires: R-openxlsx
+Requires: R-pillar
+Requires: R-pkgconfig
 Requires: R-quantreg
+Requires: R-readxl
 Requires: R-rio
 Requires: R-zip
+Requires: R-zoo
 BuildRequires : R-Formula
 BuildRequires : R-MatrixModels
 BuildRequires : R-SparseM
@@ -26,13 +36,17 @@ BuildRequires : R-abind
 BuildRequires : R-car
 BuildRequires : R-carData
 BuildRequires : R-cellranger
+BuildRequires : R-data.table
 BuildRequires : R-forcats
+BuildRequires : R-haven
+BuildRequires : R-hms
 BuildRequires : R-lmtest
-BuildRequires : R-maxLik
+BuildRequires : R-openxlsx
+BuildRequires : R-pillar
+BuildRequires : R-pkgconfig
 BuildRequires : R-quantreg
+BuildRequires : R-readxl
 BuildRequires : R-rio
-BuildRequires : R-sandwich
-BuildRequires : R-systemfit
 BuildRequires : R-zip
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
@@ -50,10 +64,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556495073
+export SOURCE_DATE_EPOCH=1558815850
 
 %install
-export SOURCE_DATE_EPOCH=1556495073
+export SOURCE_DATE_EPOCH=1558815850
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

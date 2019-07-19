@@ -4,50 +4,21 @@
 #
 Name     : R-AER
 Version  : 1.2.6
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/AER_1.2-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/AER_1.2-6.tar.gz
 Summary  : Applied Econometrics with R
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
 Requires: R-Formula
-Requires: R-MatrixModels
-Requires: R-SparseM
-Requires: R-abind
-Requires: R-carData
-Requires: R-cellranger
-Requires: R-data.table
-Requires: R-forcats
-Requires: R-haven
-Requires: R-hms
+Requires: R-car
 Requires: R-lmtest
-Requires: R-openxlsx
-Requires: R-pillar
-Requires: R-pkgconfig
-Requires: R-quantreg
-Requires: R-readxl
-Requires: R-rio
-Requires: R-zip
+Requires: R-sandwich
 Requires: R-zoo
 BuildRequires : R-Formula
-BuildRequires : R-MatrixModels
-BuildRequires : R-SparseM
-BuildRequires : R-abind
 BuildRequires : R-car
-BuildRequires : R-carData
-BuildRequires : R-cellranger
-BuildRequires : R-data.table
-BuildRequires : R-forcats
-BuildRequires : R-haven
-BuildRequires : R-hms
 BuildRequires : R-lmtest
-BuildRequires : R-openxlsx
-BuildRequires : R-pillar
-BuildRequires : R-pkgconfig
-BuildRequires : R-quantreg
-BuildRequires : R-readxl
-BuildRequires : R-rio
-BuildRequires : R-zip
+BuildRequires : R-sandwich
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
 
@@ -63,13 +34,13 @@ Christian Kleiber and Achim Zeileis (2008),
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1558815850
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1563494900
 
 %install
-export SOURCE_DATE_EPOCH=1558815850
+export SOURCE_DATE_EPOCH=1563494900
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -98,7 +69,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0

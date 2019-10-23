@@ -4,7 +4,7 @@
 #
 Name     : R-AER
 Version  : 1.2.7
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/AER_1.2-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/AER_1.2-7.tar.gz
 Summary  : Applied Econometrics with R
@@ -12,11 +12,8 @@ Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
 Requires: R-Formula
 Requires: R-car
-Requires: R-dynlm
 Requires: R-lmtest
-Requires: R-plm
 Requires: R-sandwich
-Requires: R-systemfit
 Requires: R-zoo
 BuildRequires : R-Formula
 BuildRequires : R-car
@@ -27,6 +24,7 @@ BuildRequires : R-sandwich
 BuildRequires : R-systemfit
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 Christian Kleiber and Achim Zeileis (2008),
@@ -41,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564685991
+export SOURCE_DATE_EPOCH=1571794784
 
 %install
-export SOURCE_DATE_EPOCH=1564685991
+export SOURCE_DATE_EPOCH=1571794784
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

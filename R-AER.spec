@@ -4,7 +4,7 @@
 #
 Name     : R-AER
 Version  : 1.2.9
-Release  : 35
+Release  : 36
 URL      : https://cran.r-project.org/src/contrib/AER_1.2-9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/AER_1.2-9.tar.gz
 Summary  : Applied Econometrics with R
@@ -12,13 +12,19 @@ Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
 Requires: R-Formula
 Requires: R-car
+Requires: R-dynlm
 Requires: R-lmtest
+Requires: R-plm
 Requires: R-sandwich
+Requires: R-systemfit
 Requires: R-zoo
 BuildRequires : R-Formula
 BuildRequires : R-car
+BuildRequires : R-dynlm
 BuildRequires : R-lmtest
+BuildRequires : R-plm
 BuildRequires : R-sandwich
+BuildRequires : R-systemfit
 BuildRequires : R-zoo
 BuildRequires : buildreq-R
 
@@ -29,21 +35,22 @@ Christian Kleiber and Achim Zeileis (2008),
 
 %prep
 %setup -q -c -n AER
+cd %{_builddir}/AER
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581050673
+export SOURCE_DATE_EPOCH=1589775783
 
 %install
-export SOURCE_DATE_EPOCH=1581050673
+export SOURCE_DATE_EPOCH=1589775783
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

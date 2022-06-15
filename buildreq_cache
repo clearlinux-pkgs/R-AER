@@ -1,4 +1,7 @@
-1.2.9
+1.2.10
 R-dynlm
 R-plm
+R-strucchange
 R-systemfit
+R-tseries
+R-urca

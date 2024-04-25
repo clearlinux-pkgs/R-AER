@@ -7,7 +7,7 @@
 #
 Name     : R-AER
 Version  : 1.2.12
-Release  : 61
+Release  : 62
 URL      : https://cran.r-project.org/src/contrib/AER_1.2-12.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/AER_1.2-12.tar.gz
 Summary  : Applied Econometrics with R
